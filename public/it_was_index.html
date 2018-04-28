@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your best holidays ever</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src="js/animations.js"></script>
+</head>
+<body>
+<div class="header boxcorrection">
+    <img src="https://images.unsplash.com/photo-1482531007909-192ac913980a?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=3fa1755f7f2231536ed13b7c4d19cf92">
+    <h1>The best holiday ever</h1>
+</div>
+<div class="tab boxcorrection">
+	<table id="tbhead">
+		<tr>
+			<td>
+        <div class="tbbox">
+          <p class="a">Backpacker</p>
+          <div class="underline"></div>
+        </div>
+			</td>
+			<td>
+        <div class="tbbox">
+          <p class="a">Adventurer</p>
+          <div class="underline"></div>
+        </div>
+      </td> 
+			<td>
+        <div class="tbbox">
+          <p class="a">Luxury Traveller</p>
+          <div class="underline"></div>
+        </div>
+      </td>
+		</tr>
+	</table>
+</div>
+<div class="content boxcorrection">
+	<div class="cardwrapper " onclick="getReq()">
+          <div class="card">
+            <div class="guideimg guidesrc1">
+          </div>
+            <div class="guidedata">
+              <div>
+                <h4>Road to Bali</h4>
+                <p>Indonesia</p>
+              </div>
+              <p>&euro; 7.99</p>
+            </div>
+          </div>
+    </div>
+    <div class="card2">
+        <div class="cardinfo">
+            <div class="title">
+                <h2>Road to Bali</h2>
+                <div class="countries">
+                    <img class="imgcountries" src="/svg/ic_location_on_black_24px.svg">
+                    <p class="pcountries">Indonesia, Cambo...</p>
+                    <div class="divotherscountries"><p>+3</p></div>
+                </div>
+                <div class="ratings">
+                    <div class="rating star"></div>
+                    <div class="rating star"></div>
+                    <div class="rating star"></div>
+                    <div class="rating halfstar"></div>
+                </div>
+                <p class="description">Sun, sand and wonderful nature...</p>
+            </div>
+            <div class="info">
+                <div class="infovalue">
+                    <h5>Days</h5>
+                    <h3>9</h3>
+                </div>
+                <div class="infovalue">
+                    <h5>Country</h5>
+                    <h3>1</h3>
+                </div>
+                <div class="infovalue" style="margin-bottom: 0;">
+                    <h5>Price</h5>
+                    <h2>&euro; 7,99</h2>
+                </div>
+            </div>
+        </div>
+        <div class="cardimg">
+            <img class= "imgcard" src="/img/bali-720.jpg">
+            <div id="id2" class="label"><p>TRIP GUIDE</p></div>
+            <img class="tripmap" src="/img/trip.JPG" onclick="openTripMap(this)">
+            <img class="arrowimg leftimg" src="/svg/ic_keyboard_arrow_left_white_24px.svg" onclick="">
+            <img class="arrowimg rightimg" src="/svg/ic_keyboard_arrow_right_white_24px.svg" onclick="">
+            <img class="tripmapclose" src="/svg/ic_close_black_24px.svg" onclick="closeTripMap(this)">
+        </div>
+        
+    </div>
+</div>
+    <script>
+        document.getElementsByClassName("tripmap")[0].borderRadius = "50px";
+    </script>
+<div class="search"></div>
+</body>
+</html>

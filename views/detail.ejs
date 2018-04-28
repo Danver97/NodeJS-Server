@@ -1,0 +1,42 @@
+<div class="head" style="background-image: url(" + <%= guide.imgheadurl%> + ";">
+            <img src=<%= guide.imgheadurl%> alt=<%= guide.imgheadalt%>>
+            <div class="overlay">
+                <div class="headcontent padding">
+                    <div class="info">
+                        <h1><%= guide.title%></h1>
+                        <div class="location flex-container">
+                            <img src="ic_location_on_black_24px.svg" alt="">
+                            <p><%= guide.location%></p>
+                        </div>
+                        <div class="moreinfo flex-container">
+                            <div class="flex-item">
+                                <img src="ic_event_black_24px.svg">
+                                <h3>9 days</h3>
+                            </div>
+                            <div class="flex-item">
+                                <img src="ic_public_black_24px.svg">
+                                <h3>1 country</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <%if(guide.bookable) {%>
+                            <div class="button"><p>BOOK TRIP</p></div>
+                        <%}%>
+                        <div class="button"><p>BUY GUIDE</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<% guide.description.sections.forEach(function(section){%>
+    <div class="detail padding">
+            <img class="detailimg" src=<%= section.imgurl%> alt=<%= section.imgalt%>>
+            <div class="detaildescription">
+                <div>
+                    <h3><%= section.head%></h3>
+                    <p><%= section.paragraph%></p>
+                </div>
+            </div>
+        </div>
+<%});%>

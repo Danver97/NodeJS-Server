@@ -1,0 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body{
+	margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, body, input, textarea {
+    font-family: "Montserrat", serif;
+    margin: 0;
+}

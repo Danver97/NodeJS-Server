@@ -1,0 +1,77 @@
+input, textarea {
+    padding: 8px 15px 8px 15px;
+    border-width: 0px;
+    background-color: #F9F9F9;
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+input:focus, textarea:focus {
+    //box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: #FDFDFD; 
+}
+
+textbox.textbox {
+    padding: 8px 40px 8px 15px;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type=file], input[type=file]:focus, input[type=file]:active {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+input[type=button] {
+    font-weight: bold;
+}
+
+input[type=button]:focus {
+    box-shadow: none;
+    background-color: #F9F9F9;
+}
+
+input[type=button]:hover {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: #FDFDFD;
+}
+
+input[type=button]:active {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: #FDFDFD;
+}
+
+input[type=number] {
+    text-align: right;
+}
+
+input[type=number][numinputwidth=small] {
+    width: 80px;
+}
+
+input[type=submit] {
+    color: white;
+    background-color: #1db954;
+    font-weight: bold;
+    border-radius: 1500px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+input[type=submit]:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+input[type=submit]:active {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: #189945;
+}
+
+div[alert-error] {
+    display: block;
+    color: red;
+    font-size: 12px;
+    margin-top: 8px;
+}

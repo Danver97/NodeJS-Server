@@ -1,0 +1,45 @@
+h3 {
+    margin: 36px;
+}
+
+#container {
+    width: 80%;
+    margin: auto;
+    background-color: aqua;
+}
+
+#menu {
+    display: inline-block;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 25%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0px 24px;
+    margin: 0;
+    width: 100%;
+    border: 1px;
+}
+
+#menu li {
+    width: 100%;
+    font-weight: bold;
+    padding: 16px 16px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.listborder {
+    background-color: black;
+    opacity: 0.5;
+    height: 1px;
+    margin: auto;
+    width: 100%;
+}

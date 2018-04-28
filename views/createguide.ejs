@@ -1,0 +1,104 @@
+<!DOCTTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/base_style.css">
+        <link rel="stylesheet" href="/css/form_style.css">
+        <link rel="stylesheet" href="/css/create_guide_style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="/js/create_guide.js"></script>
+        <!--<script src="/js/create_guide_validation.js"></script>-->
+    </head>
+    <body>
+        <div class="formcontainer">
+            <form id="create_guide_form" action="/guides/create/" method="post">
+                <br>
+                <h2>New guide</h2><br>
+                <!--<h3>File</h3>
+                    <input type="file" name="guidefile" value="" required>
+                    <div alert>A guide head image is required</div>
+                <br><br>-->
+                <h3>Main info</h3><br>
+                <div class="inline">
+                    <h5>Guide's title:</h5>
+                    <input class="textbox required" type="text" name="title" value="">
+                    <div alert-error>A guide title is required</div>
+                    <br><br>
+                </div>
+                <div class="inline">
+                    <h5>Head image:</h5>
+                    <input class="required" type="file" name="headimg" value="">
+                    <div alert-error>A guide main image is required</div>
+                    <br><br>
+                </div>
+                <h5>Description:</h5>
+                <textarea cols="60" rows="4" maxlength="500" name="description"></textarea><br><br>
+                <!--<input class="textbox" type="text" name="description" value="">-->
+                <h5>Price:</h5>
+                <div id="priceinfo" class="inlinecontainer">
+                    <div class="inline">
+                        <!--<div id="currencydropdown"></div>-->
+                        <input id="currency" type="button" name="currency" value="€ (EUR)"/>
+                        <div id="othercurrencies">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="inline">
+                        <input class="required" type="number" numinputwidth="small" name="price" step="0.50" min="0" max="10000" placeholder="25.00" value=""/>
+                    </div>
+                    <div alert-error>A price is required</div>
+                </div><br>
+                <div id="countries">
+                    <h4>Countries</h4>
+                    <div alert-error>At least one country and one city are required</div>
+                    <br>
+                    <div class="country">
+                        <h5>Country:</h5>
+                        <input class="textbox" type="text" name="country" value=""><br><br>
+                        <div class="city inlinecontainer">
+                            <div class="inline">
+                                <h5>City:</h5>
+                                <input class="textbox" type="text" name="city" value=""><br><br>
+                            </div>
+                            <div class="inline">
+                                <h5>Days:</h5>
+                                <input type="number" name="days" min="0" max="365" value="1"><br><br>
+                            </div>
+                        </div>
+                        <input class="addcity" type="button" onclick="addCity(this)" value="Add City"/>
+                    </div>
+                    <br>
+                    <input id="addcountry" type="button" onclick="addCountry(this)" value="Add Country"/>
+                    <!--bottone aggiungi-->
+                </div>
+                
+                <br>
+                <div id="sections">
+                    <h3>Sections</h3>
+                    <div alert-error>At least one filled section is required</div>
+                    <br>
+                    <div class="section">
+                        <h4>Section:</h4><br>
+                        <div class="inlinecontainer">
+                            <div class="inline">
+                                <h5>Section title:</h5>
+                                <input class="textbox" type="text" name="sectiontitle" value=""><br><br>
+                            </div>
+                            <div class="inline">
+                                <h5>Image section:</h5>
+                                <input type="file" name="sectionimg" value=""><br><br>
+                            </div>
+                        </div>
+                        <h5>Section description:</h5>
+                        <textarea cols="60" rows="4" maxlength="500" name="sectiondescription"></textarea><br><br>
+                    </div>
+                    <input type="button" onclick="addSection(this)" value="Add section">
+                    <!--bottone aggiungi-->
+                </div>
+                <br>
+                <input type="button" onclick="buildJSON()" value="Preview"/>
+                <input type="submit" value="Create"/>
+            </form>
+        </div>
+    </body>
+</html>

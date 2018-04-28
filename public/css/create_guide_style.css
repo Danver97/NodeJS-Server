@@ -1,0 +1,101 @@
+h1 {
+    margin-top: 35px;
+}
+
+div[alert-error] {
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.formcontainer {
+    position: relative;
+    text-align: left;
+    width: 80%;
+    min-width: 200px;
+    //max-width: 250px;
+    margin: auto;
+}
+
+#currency {
+    z-index: 2;
+    position: relative;
+    min-width: 84px;
+}
+
+#currency.shadow {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#currencydropdown {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#othercurrencies {
+    position: absolute;
+    top: 0;
+    left: 0;
+    //display: none;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    //padding: 0px 15px 0px 15px;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #F9F9F9;
+    border-radius: 16px;
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#othercurrencies.show {
+    //display: block;
+    padding: 32px 15px 8px 15px;
+    height: auto;
+    opacity: 1;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#othercurrencies ul {
+    padding: 0;
+    margin: 8px 0 0 0;
+    list-style-type: none;
+}
+
+#othercurrencies ul li {
+    margin: 0 0 3px 0;
+}
+
+#othercurrencies ul a {
+    color: black;
+}
+
+.textbox {
+    padding: 8px 40px 8px 15px;
+    background-color: #F9F9F9;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.city, .addcity {
+    margin-left: 40px;
+}
+
+.inline {
+    display: inline-block;
+    position: relative;   
+    vertical-align:top;
+}
+
+.cityinfo {
+    display: inline-block;
+}
+
+a {
+    margin-top: 12px;
+    color: #1db954;
+    font-size: 13px;
+}

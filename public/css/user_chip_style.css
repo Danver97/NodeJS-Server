@@ -1,0 +1,87 @@
+div.userchipdropdown {
+    position: absolute;
+    //position: relative;
+    display: inline-block;
+    background-color: white;
+    border-radius: 24px;
+    height: 48px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1); /* Safari */
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+div.userchipdropdown div.userchip {
+    display: inline-block;
+    position: relative;
+    height: 48px;
+    background-color: white;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+#userimg {
+    float: left;
+    background-color: #D9D9D9;
+    height: inherit;
+    width: 48px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.center-vertical {
+    top: 50%;
+    transform: translateY(-50%);/**/
+    transform: -webkit-translateY(-50%);
+    transform: -ms-translateY(-50%);
+}
+
+div.userchip p {
+    position: relative;
+    float: left;
+    margin-left: 16px;
+}
+
+#userarrow {
+    position: relative;
+    float: left;
+    height: 24px;
+    width: 24px;
+    margin-left: 10px;
+    margin-right: 14px;
+}
+
+div.userchipoptions {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 24px;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1); /* Safari */
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    margin: 8px 0;
+}
+
+div.userchipoptions p {
+    margin: 8px 0;
+    font-size: 90%;
+}
+
+div.userchipdropdown a {
+    color: black;
+    text-decoration: none;
+}
+
+div.userchipdropdown:hover {
+    height: auto;
+}
+
+div.userchipdropdown:hover div.userchipoptions {
+    height: auto;
+}
+
+div.userchipdropdown:hover div.userchip {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

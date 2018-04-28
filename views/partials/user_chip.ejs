@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/user_chip_style.css" type="text/css">
+<div class="userchipdropdown">
+    <div class="userchip">
+        <img id="userimg" src="">
+        <%if(user){%>
+        <p class="center-vertical"><%= user.firstname%></p>
+        <%} else {%>
+        <p class="center-vertical">Welcome!</p>
+        <%}%>
+        <img class="center-vertical" id="userarrow" src="/svg/ic_arrow_drop_down_black_24px.svg">
+    </div>
+    <div class="userchipoptions">
+        <%if(user){%>
+        <p><a href="">My account</a></p>
+        <p><a href="">My guides</a></p>
+        <p><a href="">My trips</a></p>
+        <p><a href="/users/logout">Log out</a></p>
+        <%} else {%>
+        <p><a href="/users/login">Log in</a></p>
+        <p><a href="/users/signup">Sign up</a></p>
+        <%}%>
+    </div>
+</div>

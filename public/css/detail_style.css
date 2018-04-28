@@ -1,0 +1,309 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+*{
+	box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+	margin:0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: "Montserrat", serif;
+}
+
+.userchipdropdown {
+    top: 30px;
+    right: 40px;
+    z-index: 3;
+}
+
+.detail {
+    //height: 600px;
+    //max-height: 600px;
+    width: 100%;
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    //overflow: hidden;
+}
+.head {
+    position: relative;
+    //height: 285px;
+    width: 100%;
+    background-image: url(maldives-720.jpg);
+    background-size: cover;
+    //background-color: red;
+    //padding-left: 140px;
+    //padding-right: 140px;
+}
+
+.head img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+}
+
+.detailimg {
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: inherit;
+    background-color: rgba(0,0,0,0.38);
+    z-index: 1;
+}
+
+.head p {
+    margin: 0;
+    font-family: "Montserrat", serif;
+}
+
+.padding {
+    padding-left: 140px;
+    padding-right: 140px;
+}
+
+.headcontent {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    //background-color: aqua;
+}
+
+.info {
+    //width: 200px;
+    margin: auto;
+    margin-top: 100px;
+    color: white;
+    text-align: center;
+}
+
+.headcontent .button {
+    position: relative;
+    float: right;
+    background-color: #FFA200;
+    padding: 13px 38px;
+    margin-left: 50px;
+    margin-top: 25px;
+    border-radius: 10000px;
+}
+
+.buttons {
+    position: absolute;
+    padding: inherit;
+    bottom: 35px;
+    right: 0;
+    color: white;
+    z-index: 2;
+    text-align: center;
+}
+
+.location {
+    
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.location img {
+    height: 24px;
+    width: 24px;
+}
+
+.location p {
+    margin-left: 10px;
+}
+
+.location .loctext {
+    text-align: center;
+    margin: auto;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-item {
+    margin: 0 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.flex-item h3 {
+    margin-left: 10px;
+}
+
+.moreinfo {
+    margin-top: 30px;
+}
+
+.detaildescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    //position: relative;
+    float: right;
+    padding: 0 5%;
+    width: 50%;
+    //height: 200px;
+    text-align: center;
+}
+
+.detaildescription p {
+    margin-top: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+    
+    .padding{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .head {
+        //height: auto;
+        display: block;
+    }
+    
+    .head img {
+        display: none;
+    }
+    
+    .overlay, .headcontent {
+        position: relative;
+    }
+    
+    .overlay {
+        padding-top: 30px;
+    }
+    
+    .info {
+        margin-top: 0px;
+    }
+    
+    .detailimg {
+        width: 100%;
+    }
+
+    .detaildescription {
+        width: 100%;
+        float: none;
+        margin-top: 30px;
+    }
+    
+    .buttons {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+        margin: 20px 0;
+        bottom: 0;
+        
+    }
+    
+    .headcontent .button {
+        float: none;
+        margin: 0px 10px;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .padding{
+        padding-left: 140px;
+        padding-right: 140px;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    
+    .head {
+        height: 285px;
+        padding-top: 0;
+    }
+    
+    .head img {
+        display: block;
+    }
+    
+    .overlay, .headcontent {
+        position: absolute;
+    }
+    
+    .buttons {
+        position: absolute;
+        display: block;
+        justify-content: center;
+        padding: inherit;
+        width: auto;
+        margin: 0;
+        bottom: 35px;
+        
+    }
+    
+    .headcontent .button {
+        float: right;
+        padding: 10px 24px;
+        margin: 0;
+        margin-left: 20px;
+        font-size: 16px;
+    }
+    
+    .info {
+        margin-top: 50px;
+    }
+    
+    .detail {
+        max-height: 270px;
+    }
+    
+    .detailimg {
+        width: 50%;
+    }
+    
+    .detaildescription {
+        width: 50%;
+        float: right;
+        margin-top: 0px;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px){
+    
+    .detail {
+        max-height: 380px;
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    
+    .detail {
+        max-height: 600px;
+    }
+}
+
+/*.detaildescription > div {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform: -webkit-translate(-50%, -50%);
+    transform: -ms-translate(-50%, -50%);
+}*/

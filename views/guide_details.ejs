@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= guide.title%></title>
+        <link rel="stylesheet" href="/css/detail_style.css" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="head" style="background-image: url(<%= guide.imgheadurl%>);">
+            <% include partials/user_chip.ejs %>
+            <img src=<%= guide.imgheadurl%> alt=<%= guide.imgheadalt%>>
+            <div class="overlay">
+                <div class="headcontent padding">
+                    <div class="info">
+                        <h1><%= guide.title%></h1>
+                        <div class="location flex-container">
+                            <img src="/ic_location_on_black_24px.svg" alt="">
+                            <p><%= guide.location%></p>
+                        </div>
+                        <div class="moreinfo flex-container">
+                            <% if(guide.days){%>
+                            <div class="flex-item">
+                                <img src="/svg/ic_event_black_24px.svg">
+                                <h3>9 days</h3>
+                            </div>
+                            <%}%>
+                            <% if(guide.countries){%>
+                                <div class="flex-item">
+                                    <img src="/svg/ic_public_black_24px.svg">
+                                    <h3>1 country</h3>
+                                </div>
+                            <%}%>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <%if(guide.bookable) {%>
+                            <div class="button"><p>BOOK TRIP</p></div>
+                        <%}%>
+                        <div class="button"><p>BUY GUIDE</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<% guide.sections.forEach(function(section){%>
+    <div class="detail padding">
+            <img class="detailimg" src=<%= section.imgurl%> alt=<%= section.imgalt%>>
+            <div class="detaildescription">
+                <div>
+                    <h3><%= section.head%></h3>
+                    <p><%= section.paragraph%></p>
+                </div>
+            </div>
+        </div>
+<%});%>
+        <script>
+            //var height = ;
+            //$(".detaildescription").height($(".detail").height());
+            function adaptDescriptionHeight(){
+                if($(window).width < 992){
+                    $(".detaildescription").height($(".detail").height());
+                    $(".detail img").height($(".detail").height());
+                    //alert();
+                }
+            }
+            
+            adaptDescriptionHeight();
+        </script>
+    </body>
+</html>

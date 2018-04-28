@@ -1,0 +1,438 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body{
+	margin:0;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.userchipdropdown {
+    top: 30px;
+    right: 40px;
+    z-index: 3;
+}
+
+.header {
+    position: relative;
+	width: 100%;
+	height: 200px;
+	max-height: 200px;
+    //overflow: hidden;
+    text-align:center;
+}
+.header > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 57%;
+    top 0;
+    left: 0;
+    position: absolute;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: "Montserrat", serif;
+}
+
+h1 {
+    z-index: 1;
+    position: relative;
+    top: 35%;
+    color: white;
+}
+
+.tab{
+	background-color: white;
+	width: 100%;
+	//border-radius: 0 0 4px 4px;
+    position:sticky;
+    top: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index:2;
+}
+
+table#tbhead {
+	width: 100%;
+	height: 40px;
+	text-align: center;
+    border-spacing: 0px;
+}
+
+table#tbhead td{
+	//background-color: yellow;
+	width: 33%;
+    padding: 0px;
+}
+
+p.a {
+    font-family: "Montserrat", sans-serif;
+}
+
+.underline {
+    //display: none;
+    background-color: orange;
+    position: relative;
+    bottom: 5px;
+    height:  5px;
+    width: 0%;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    margin: auto;
+}
+
+.tbbox{
+    height: 35px;
+}
+
+div.tbbox:hover div.underline{
+    display: block;
+    width: 100%;
+    opacity: 1;
+}
+
+.content {
+	//background-color: red;
+	width:100%;
+	padding: 6px;
+	text-align: center;
+}
+
+.cardwrapper{
+	//background-color: blue;
+	display: inline-block;
+	padding: 6px;
+	width: 100%;
+	min-width: 250px;
+	max-width: 350px;
+}
+
+@media only screen and (min-width: 537px){
+	.cardwrapper{
+		width: 49.6%;
+	}
+}
+
+@media only screen and (min-width: 799px){
+	.cardwrapper{
+		width: 32.989%;
+	}
+}
+
+.card {
+	text-align: left;
+    display: inline-block;
+	//height: 200px;
+	width: 100%;
+	background-color: #FAFAFA;
+	border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    overflow:hidden;
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	background-color: white;
+}
+
+.guidedata {
+  //background-color: red;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+}
+
+.guidedata h4 {
+  font-family: "Montserrat", serif;
+  position: relative;
+  top: -15px;
+  left: 8px;
+  //color: #37474F;
+}
+
+.guidedata p{
+  font-family: "Montserrat", serif;
+  position: relative;
+  font-size:80%;
+  color: #37474F;
+  top: -35px;
+  left: 8px;
+}
+
+.guidedata > p{
+  font-family: "Montserrat", serif;
+  position: relative;
+  font-size:100%;
+  color: #37474F;
+  top: -90px;
+  left: -13px;
+  float: right;
+}
+
+div.guideimg{
+  width:100%;
+  height:200px;
+  overflow:hidden;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+div.guidesrc1{
+	//background-image: url(https://images.unsplash.com/photo-1501813531019-338a4182efb0?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=d5977d282d9d9982468a52f0d3e74046);
+	background-image: url(/img/bali-720.jpg);
+}
+
+div.guidesrc2{
+	//background-image: url(https://images.unsplash.com/photo-1506783323968-e8dad28ae1de?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=cb9bd75d22168c10156b938e0f49e17b);
+	background-image: url(maldives-720.jpg);
+}
+
+div.guidesrc3{
+	//background-image: url(https://images.unsplash.com/photo-1496372412473-e8548ffd82bc?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=47c062ccc0b29e23a9965dc7fc1ff20e);
+	background-image: url(india-720.jpg);
+}
+
+div.guidesrc4{
+	//background-image: url(https://images.unsplash.com/photo-1504532472068-9ae844337da7?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=95f85a2f8369fde0b783761a7bb66ae3);
+	background-image: url(philippines-720.jpg);
+}
+
+div.guidesrc5{
+	//background-image: url(https://images.unsplash.com/photo-1468436385273-8abca6dfd8d3?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=4547f8eb6d9432864bcb8defecb9edc8);
+	background-image: url(netherland-720.jpg);
+}
+
+div.guidesrc6{
+	//background-image: url(https://images.unsplash.com/photo-1415199899804-121c5b2c2132?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=1c9894c367997e0ab687f103a793d357);
+	background-image: url(iceland-720.jpg);
+}
+
+.search {
+	position: fixed;
+	z-index: 3;
+	right: 16px;
+	bottom: 16px;
+	height: 60px;
+	width: 60px;
+	background-color: #FAFAFA;
+	border-radius: 500px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	
+}
+
+.search:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	background-color: white;
+}
+
+.card2 {
+	text-align: left;
+    position: relative;
+    display: inline-block;
+	height: 320px;
+	width: 730px;
+	background-color: #FAFAFA;
+	border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    overflow:hidden;
+}
+
+.card2:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	background-color: white;
+}
+
+.card2 .imgcard {
+	border-radius: 2px;
+    float: right;
+	height: inherit;
+	width: 514px;
+    object-fit: cover;
+}
+
+.card2 .cardinfo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 16px;
+	width: 216px;
+    height: inherit;
+    overflow: hidden;
+}
+.card2 .title{
+	width: 100%;
+}
+
+.title h2{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.cardinfo .info {
+    position: absolute;
+    bottom: 0;
+	width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+    padding-right: 16px;
+}
+.card2 .infovalue {
+    float: left;
+    position: relative;
+    top: 0;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+.infovalue h6,h5,h3,h2,p {
+    margin: 0;
+}
+
+.countries .pcountries {
+    display: inline;
+    font-size: 85%;
+    color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    margin: 0;
+}
+
+.card2 .cardimg {
+    position: relative;
+    float: right;
+	border-radius: 2px;
+	height: inherit;
+    overflow: hidden;
+}
+
+.cardimg .label {
+    background-color: rgba(255,255,255,.8);
+    border-radius: 10000px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 16px;
+    z-index: 2;
+}
+.label p {
+    float: left;
+    margin: 4px 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.ratings .rating {
+    height: 100%;
+    width: 24px;
+    float: left;
+    margin-right: 8px;
+    
+}
+
+.ratings .star {
+    background-image: url(/svg/ic_star_black_24px.svg);
+}
+
+.ratings .halfstar {
+    background-image: url(/svg/ic_star_half_black_24px.svg);
+}
+
+.ratings {
+    width: 100%;
+    height: 24px;
+    margin: 6px 0 0 0;
+}
+
+.description {
+    font-size: 90%;
+    margin: 6px 0 0 0;
+}
+
+.cardimg .tripmap {
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border-radius: 50px;
+}
+
+.arrowimg {
+    position: absolute;
+    top: 50%;
+    margin: 16px;
+    //-ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+.leftimg {
+    left: 0;
+}
+
+.rightimg {
+    right: 0;
+}
+
+.countries .imgcountries {
+    //float: left;
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+    opacity: 0.7;
+}
+.countries {
+    position: relative;
+    margin: 6px 0 0 0;
+}
+
+.countries .divotherscountries {
+    background-color: black;
+    border-radius: 10000px;
+    float: right;
+    position: absolute;
+    right: 0;
+    padding: 4px;
+    top: 50%;
+    transform: translate(0,-50%);
+    color: white;
+    opacity: 0.7;
+}
+
+.divotherscountries p {
+    margin: 0;
+    font-size: 75%;
+}
+
+.tripmapclose {
+    display: none;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    opacity: 1;
+}
+
+
+
+.userchipcontainer {
+    
+}
